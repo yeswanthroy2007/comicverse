@@ -5,6 +5,23 @@ const currencyFormatter = new Intl.NumberFormat("en-US", {
   currency: "USD",
 });
 
+// Get base URL for assets (works with Vite's base path)
+const getBaseUrl = () => {
+  // In Vite, import.meta.env.BASE_URL is available
+  // For GitHub Pages, this will be '/comicverse/'
+  // For local dev, this will be '/'
+  return import.meta.env?.BASE_URL || '/';
+};
+
+// Helper function to get correct image path
+export const getImagePath = (path) => {
+  // Remove leading slash if present, then add base URL
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  const baseUrl = getBaseUrl();
+  // Ensure baseUrl ends with / and path doesn't start with /
+  return `${baseUrl}${cleanPath}`;
+};
+
 export const formatCurrency = (value) =>
   currencyFormatter.format(Number(value));
 
@@ -19,9 +36,10 @@ export const renderComics = (container, comics) => {
 
 export const createComicCard = (comic) => {
   const detailUrl = `comic-detail.html?id=${encodeURIComponent(comic.id)}`;
+  const imagePath = getImagePath(comic.coverImg);
   return `
     <article class="card-comic">
-      <img src="${comic.coverImg}" alt="Cover for ${comic.title}" loading="lazy" />
+      <img src="${imagePath}" alt="Cover for ${comic.title}" loading="lazy" />
       <div class="card-body">
         <p class="badge">${comic.publisher}</p>
         <h3>${comic.title}</h3>

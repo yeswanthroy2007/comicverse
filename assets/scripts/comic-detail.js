@@ -5,6 +5,7 @@ import {
   getQueryParam,
   renderComics,
   showToast,
+  getImagePath,
 } from "./ui.js";
 
 const detailRoot = document.querySelector("[data-detail-root]");
@@ -29,7 +30,7 @@ const renderDetail = () => {
   detailRoot.querySelector("[data-detail-price]").textContent = formatCurrency(
     comic.price,
   );
-  detailRoot.querySelector("[data-detail-cover]").src = comic.coverImg;
+  detailRoot.querySelector("[data-detail-cover]").src = getImagePath(comic.coverImg);
   detailRoot.querySelector("[data-detail-cover]").alt =
     `Cover of ${comic.title}`;
 

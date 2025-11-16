@@ -5,7 +5,7 @@ import {
   popularComics,
   listPublishers,
 } from "../data/comics.js";
-import { renderComics } from "./ui.js";
+import { renderComics, getImagePath } from "./ui.js";
 
 const heroSlides = featuredComics();
 
@@ -31,7 +31,7 @@ const buildHero = () => {
               <a class="btn btn-secondary" href="browse.html">Browse all</a>
             </div>
           </div>
-          <img src="${comic.coverImg}" alt="Featured comic ${comic.title}" />
+          <img src="${getImagePath(comic.coverImg)}" alt="Featured comic ${comic.title}" />
         </article>
       `,
     )

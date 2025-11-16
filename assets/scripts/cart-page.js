@@ -5,7 +5,7 @@ import {
   calculateTotals,
   clearCart,
 } from "./cart.js";
-import { formatCurrency, showToast } from "./ui.js";
+import { formatCurrency, showToast, getImagePath } from "./ui.js";
 
 const tbody = document.querySelector("[data-cart-body]");
 const emptyState = document.querySelector("[data-cart-empty]");
@@ -30,7 +30,7 @@ const renderCart = () => {
         <tr>
           <td>
             <div style="display:flex;align-items:center;gap:1rem;">
-              <img src="${item.coverImg}" alt="${item.title}" width="60" height="90" />
+              <img src="${getImagePath(item.coverImg)}" alt="${item.title}" width="60" height="90" />
               <div>
                 <strong>${item.title}</strong>
                 <p class="card-meta">${item.publisher}</p>
