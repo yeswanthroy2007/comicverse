@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse Comics - ComicVerse</title>
+  <link rel="stylesheet" href="assets/styles/base.css" />
+  <link rel="stylesheet" href="assets/styles/components.css" />
+  <link rel="stylesheet" href="assets/styles/pages.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="navbar-brand">ComicVerse</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="cart.html">Cart <span data-cart-count>0</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 style="margin-bottom: 2rem;">Browse Our Collection</h1>
+
+        <div class="filter-bar">
+          <input type="text" class="select-control" placeholder="Search by title or hero..." data-search />
+        </div>
+
+        <div style="margin: 1.5rem 0;">
+          <h3 style="margin-bottom: 0.75rem; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em;">Publishers</h3>
+          <div class="filter-bar" data-filter-publisher></div>
+        </div>
+
+        <div style="margin: 1.5rem 0;">
+          <h3 style="margin-bottom: 0.75rem; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em;">Genres</h3>
+          <div class="filter-bar" data-filter-genre></div>
+        </div>
+
+        <div style="margin: 1.5rem 0;">
+          <label style="font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 0.5rem;">Sort By</label>
+          <select class="select-control" data-sort>
+            <option value="release-desc">Newest First</option>
+            <option value="release-asc">Oldest First</option>
+            <option value="title-az">Title (A-Z)</option>
+            <option value="price-asc">Price (Low to High)</option>
+            <option value="price-desc">Price (High to Low)</option>
+          </select>
+        </div>
+
+        <div style="margin: 2rem 0;">
+          <p style="font-size: 0.9rem; color: var(--color-muted);" data-filter-summary></p>
+        </div>
+
+        <div class="card-grid" data-catalog></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 ComicVerse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/scripts/browse.js"></script>
+</body>
+</html>

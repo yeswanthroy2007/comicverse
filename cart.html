@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Cart - ComicVerse</title>
+  <link rel="stylesheet" href="assets/styles/base.css" />
+  <link rel="stylesheet" href="assets/styles/components.css" />
+  <link rel="stylesheet" href="assets/styles/pages.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="navbar-brand">ComicVerse</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="cart.html">Cart <span data-cart-count>0</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h1 style="margin-bottom: 2rem;">Shopping Cart</h1>
+
+        <div class="cart-page">
+          <div data-cart-empty style="display: none;">
+            <div class="catalog-empty">
+              <p>Your cart is empty. <a href="browse.html">Continue shopping</a> to find your favorite comics!</p>
+            </div>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="cart-table">
+              <thead>
+                <tr>
+                  <th style="text-align: left;">Item</th>
+                  <th style="text-align: left;">Price</th>
+                  <th style="text-align: left;">Quantity</th>
+                  <th style="text-align: left;">Subtotal</th>
+                  <th style="text-align: left;"></th>
+                </tr>
+              </thead>
+              <tbody data-cart-body></tbody>
+            </table>
+          </div>
+
+          <div data-cart-totals style="display: none;"></div>
+
+          <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 2rem;">
+            <a href="browse.html" class="btn btn-secondary">Continue Shopping</a>
+            <button class="btn btn-primary" data-checkout>Checkout</button>
+          </div>
+
+          <div class="checkout-message" data-checkout-message style="display: none;"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 ComicVerse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/scripts/cart-page.js"></script>
+</body>
+</html>

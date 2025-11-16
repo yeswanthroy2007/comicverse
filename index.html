@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComicVerse - Marvel & DC Comic Store</title>
+  <link rel="stylesheet" href="assets/styles/base.css" />
+  <link rel="stylesheet" href="assets/styles/components.css" />
+  <link rel="stylesheet" href="assets/styles/pages.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="navbar-brand">ComicVerse</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="cart.html">Cart <span data-cart-count>0</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Marvel & DC Legends Comics</h1>
+            <p>Explore the ultimate collection of Marvel and DC comics featuring iconic heroes, epic battles, and incredible stories. Find your favorite series today!</p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="browse.html" class="btn btn-primary">Browse All Comics</a>
+              <a href="browse.html?publisher=Marvel%20Universe" class="btn btn-secondary">Marvel Collection</a>
+              <a href="browse.html?publisher=DC%20Universe" class="btn btn-secondary">DC Collection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="carousel">
+          <div class="carousel-track" data-carousel-track></div>
+          <div class="carousel-controls">
+            <button data-carousel-prev>❮</button>
+            <button data-carousel-next>❯</button>
+          </div>
+          <div class="pagination-dots" data-carousel-dots></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>New Releases</h2>
+          <a href="browse.html" class="btn btn-secondary">View All</a>
+        </div>
+        <div class="card-grid" data-new-releases></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Publisher Spotlights</h2>
+        </div>
+        <div class="publisher-spotlights" data-publisher-spotlights></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Popular Comics</h2>
+        </div>
+        <div class="card-grid" data-popular></div>
+      </div>
+    </section>
+
+    <section class="section">
+  <div class="container">
+    <div class="section-heading">
+      <h2>By ComicVerse </h2>
+    </div>
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 ComicVerse. All rights reserved. Marvel and DC are registered trademarks.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/scripts/index.js"></script>
+</body>
+</html>

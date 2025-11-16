@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Comic Detail - ComicVerse</title>
+  <link rel="stylesheet" href="assets/styles/base.css" />
+  <link rel="stylesheet" href="assets/styles/components.css" />
+  <link rel="stylesheet" href="assets/styles/pages.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="navbar-brand">ComicVerse</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="browse.html">Browse</a>
+          <a href="cart.html">Cart <span data-cart-count>0</span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container" data-detail-root>
+        <div class="detail-layout">
+          <div class="detail-cover">
+            <img src="/placeholder.svg" alt="" data-detail-cover />
+          </div>
+          <div>
+            <div class="badge" data-detail-publisher></div>
+            <h1 data-detail-title style="margin: 1rem 0; font-size: 2.5rem;"></h1>
+            <div class="detail-price" data-detail-price></div>
+            <p style="color: var(--color-muted); line-height: 1.8; margin: 1.5rem 0;" data-detail-description></p>
+            <div class="detail-meta" data-detail-meta></div>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button class="btn btn-primary" data-add-to-cart>Add to Cart - $5.99</button>
+              <a href="browse.html" class="btn btn-secondary">Continue Shopping</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 4rem;">
+          <h2 style="margin-bottom: 1.5rem;">Related Comics</h2>
+          <div class="card-grid" data-related></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 ComicVerse. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="assets/scripts/comic-detail.js"></script>
+</body>
+</html>
